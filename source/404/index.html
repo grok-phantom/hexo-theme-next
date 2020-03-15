@@ -35,7 +35,7 @@
 
     <p>REQUEST_PAGE_NOT_FOUND_IN_THIS_BLOG</p>
 
-    <p>Sorry for the trouble, please drop me an <a href="mailto:grok.phantom@gmail.com" target="_blank" rel="noopener">email</a> for this problem. In <span id="timer">30</span> seconds, you will be redirected to the home page <a href="http://wizplus.top">Back to Home</a></p>
+    <p>Sorry for the trouble, please drop me an <a href="mailto:grok.phantom@gmail.com" target="_blank" rel="noopener">email</a> for this problem. In <span id="timer">30</span> seconds, you will be redirected to the home page <a href="/">Back to Home</a></p>
 
   </div>
 
@@ -47,14 +47,7 @@
      * remove useless sections
      */
     var body = document.getElementsByTagName('body')[0];
-    var header = document.getElementsByClassName('wrap')[0];
-    var post = document.getElementsByClassName('post-content')[0];
 
-    // Move post section to direct child of body
-    body.appendChild(post);
-
-    // Remove header and post section
-    body.removeChild(header);
 
     /**
      * timer
