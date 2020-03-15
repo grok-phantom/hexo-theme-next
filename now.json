@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "awesome-utopian",
   "builds": [
     {
       "src": "package.json",
