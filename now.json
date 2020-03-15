@@ -1,15 +1,9 @@
 {
   "version": 2,
-  "name": "awesome-utopian",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@now/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
+  "name": "wizplus",
+  "scripts":{
+    "build": "next build"
+  },
   "routes": [
     {"handle": "filesystem"},
     {"src": "/.*", "status": 404, "dest": "404/index.html"}
