@@ -1,8 +1,17 @@
 {
   "version": 2,
+  "name": "awesome-utopian",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public"
+      }
+    }
+  ],
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" },
-    { "handle": "filesystem" },
-    { "src": "/.*", "status": 404, "dest": "/404" }
+    {"handle": "filesystem"},
+    {"src": "/.*", "status": 404, "dest": "404.html"}
   ]
 }
