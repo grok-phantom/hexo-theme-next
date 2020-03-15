@@ -2,6 +2,87 @@
 title: 404
 date: 1970-01-01 00:00:00
 ---
-<script src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js"
-        charset="utf-8" homePageUrl="/" homePageName="Back to home">
+<script>
+(function() {
+  /**
+   * redirect
+   */
+  if (location.href.indexOf('/blog/') !== -1) {
+    location.href = location.href.replace('/blog/', '/');
+  }
+})();
+</script>
+
+<style>
+  body {
+    background-color: rgb(32, 103, 178);
+  }
+  #head {
+    font-size: 75px;
+  }
+  .section {
+    margin: 180px auto;
+    width: 75%;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+  }
+</style>
+
+<body scroll="no" id="404">
+
+  <div class="section">
+    <p id="head">404 :(</p>
+
+    <p>Ooooops, a problem has been detected.</p>
+
+    <p>REQUEST_PAGE_NOT_FOUND_IN_THIS_BLOG</p>
+
+    <p>Sorry for the trouble, please drop me an <a href="mailto:zp_j@outlook.com" target="_blank" rel="noopener">email</a> for this problem. In <span id="timer">30</span> seconds, you will be redirected to the home page <a href="http://zpjiang.me">http://zpjiang.me/</a></p>
+
+  </div>
+
+</body>
+
+<script>
+  (function() {
+    /**
+     * remove useless sections
+     */
+    var body = document.getElementsByTagName('body')[0];
+    var header = document.getElementsByClassName('wrap')[0];
+    var post = document.getElementsByClassName('post-content')[0];
+
+    // Move post section to direct child of body
+    body.appendChild(post);
+
+    // Remove header and post section
+    body.removeChild(header);
+
+    /**
+     * timer
+     */
+    var timerDom = document.getElementById('timer');
+    var count = 30;
+    var timer = setInterval(function() {
+      timerDom.textContent = (count--);
+      if (count === 0) {
+        clearInterval(timer);
+        location.href = "/archives"
+      }
+    }, 1000);
+
+    /**
+     * for geeks
+     */
+    var str = "    .---.     .----.       .---.\n\
+   / .  |    /  ..  \\     / .  |\n\
+  / /|  |   .  /  \\  .   / /|  |\n\
+ / / |  |_  |  |  '  |  / / |  |_\n\
+/  '-'    | '  \\  /  ' /  '-'    |\n\
+`----|  |-'  \\  `'  /  `----|  |-'\n\
+     `--'     `---''        `--'"
+    console.log(str);
+  })();
 </script>
