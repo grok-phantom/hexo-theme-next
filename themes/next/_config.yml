@@ -597,7 +597,7 @@ comments:
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: wizplus
   count: true
   #post_meta_order: 0
